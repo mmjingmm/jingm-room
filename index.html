@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>健康饮食指南</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f9f9f9;
+            color: #333;
+            text-align: center;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+        }
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        footer {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>健康饮食指南</h1>
+        <p>吃出健康，吃出美丽！</p>
+    </header>
+
+    <section>
+        <h2>为什么健康饮食很重要？</h2>
+        <p>健康饮食可以帮助我们保持体重、增强免疫力、预防疾病，还能让我们的皮肤更好哦！</p>
+        <button onclick="alert('💡 记得每天吃五颜六色的蔬菜和水果！')">点击获取健康小贴士</button>
+    </section>
+
+    <section>
+        <h2>每日健康挑战</h2>
+        <p id="challenge">今天喝 8 杯水！</p>
+        <button onclick="newChallenge()">换一个挑战</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 健康饮食指南</p>
+    </footer>
+
+    <script>
+        const challenges = [
+            "今天喝 8 杯水！",
+            "吃一份新鲜的沙拉。",
+            "尝试一种新的水果。",
+            "用全谷物代替精制谷物。",
+            "少吃一份高糖零食。",
+            "做 10 分钟的运动。"
+        ];
+
+        function newChallenge() {
+            const challengeElement = document.getElementById("challenge");
+            const randomChallenge = challenges[Math.floor(Math.random() * challenges.length)];
+            challengeElement.textContent = randomChallenge;
+        }
+    </script>
+</body>
+</html>
